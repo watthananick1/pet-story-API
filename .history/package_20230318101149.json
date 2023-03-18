@@ -1,0 +1,26 @@
+node:internal/process/promises:288
+            triggerUncaughtException(err, true /* fromPromise */);
+            ^
+
+Error: Unable to detect a Project Id in the current environment. 
+To learn more about authentication and Google APIs, visit: 
+https://cloud.google.com/docs/authentication/getting-started
+    at GoogleAuth.findAndCacheProjectId (/Users/watthananick/petstory_api/node_modules/google-auth-library/build/src/auth/googleauth.js:123:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Firestore.initializeIfNeeded (/Users/watthananick/petstory_api/node_modules/@google-cloud/firestore/build/src/index.js:1156:35)
+    at async WriteBatch._commit (/Users/watthananick/petstory_api/node_modules/@google-cloud/firestore/build/src/write-batch.js:460:9)
+    at async file:///Users/watthananick/petstory_api/index.js:15:5
+Caused by: Error
+    at WriteBatch.commit (/Users/watthananick/petstory_api/node_modules/@google-cloud/firestore/build/src/write-batch.js:433:23)
+    at DocumentReference.create (/Users/watthananick/petstory_api/node_modules/@google-cloud/firestore/build/src/reference.js:321:14)
+    at CollectionReference.add (/Users/watthananick/petstory_api/node_modules/@google-cloud/firestore/build/src/reference.js:2318:28)
+    at file:///Users/watthananick/petstory_api/index.js:15:16
+    at Layer.handle [as handle_request] (/Users/watthananick/petstory_api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/watthananick/petstory_api/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/Users/watthananick/petstory_api/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/Users/watthananick/petstory_api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/watthananick/petstory_api/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/watthananick/petstory_api/node_modules/express/lib/router/index.js:346:12)
+
+Node.js v18.10.0
+[nodemon] app crashed - waiting for file changes before starting...
